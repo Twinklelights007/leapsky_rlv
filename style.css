@@ -1,0 +1,891 @@
+*{
+
+}*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.hero{
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(images/gradient\ 3.png);
+  background-position: center;
+  background-size: cover;
+  padding: 10px 10%;
+  overflow: hidden;
+}
+
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 250px;
+   
+    
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: antiquewhite;
+    font-weight: 400;
+}
+.login-btn{
+    text-decoration: none;
+    color: antiquewhite;
+    margin-right: 15px;
+    font-weight: 400;
+    
+}
+.download-btn{
+    text-decoration: none;
+    color: antiquewhite;
+    margin-right: 15px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 14px 40px;
+    color: #1e470e; ;
+    background-image: linear-gradient(45deg,#37ff00,#1eff00);
+    font-size:14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+
+}
+.content{
+    margin-top: 10%;
+    max-width: 600px;
+    color: azure;
+
+}
+
+.content h1{
+    font-size: 70px;
+    color: #ffffff;
+}
+.content p{
+    margin-top: 10px 30px;
+    color:#ffffff;
+    animation-delay: 1s;
+    font-size: 20px;
+    
+}
+
+/* === removing default button style ===*/
+.button {
+    margin-top: 20%;
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* button styling */
+  .button {
+    margin-top: 10%;
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #0efa0e;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+  .video-container {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    right: 0;  /* Align to the right */
+    transform: translateY(-50%); /* Adjust to align the center vertically */
+    width: 50%; /* Increase width of the container */
+    padding: 10px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), /* Soft inner glow */
+                0 0 20px rgba(0, 255, 0, 0.7), /* Medium outer glow */
+                0 0 30px rgba(0, 255, 0, 1); /* Strong outer glow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for glow effect */
+}
+
+/* Change glow effect on hover */
+.video-container:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7), /* Enhanced inner glow */
+                0 0 30px rgba(0, 255, 0, 1), /* Enhanced outer glow */
+                0 0 40px rgba(0, 255, 0, 1); /* Even stronger outer glow */
+}
+
+/* Define styles for the video element */
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Rounded corners for the video */
+}
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/*------------------------------------------cards-----------------------*/
+.card-1 {
+    box-sizing: border-box;
+    width: 200px;
+    height: 300px;
+    background-image: url(images/Oppenheimer.avif);
+    background-size: cover; /* Ensures the image covers the entire card */
+    background-position: center; /* Centers the image within the card */
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    opacity: 0%;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+  /* Fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+  .card-1:hover {
+    border: 1px solid rgb(61, 255, 3);
+    transform: scale(1.05);
+  }
+  
+  .card-1:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+
+
+  .card-2 {
+    box-sizing: border-box;
+    width: 200px;
+    height: 300px;
+    background-image: url(images/inception.jpg);
+    background-size: cover; /* Ensures the image covers the entire card */
+    background-position: center; /* Centers the image within the card */
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    opacity: 0%;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+    
+}
+
+  
+  .card-2:hover {
+    border: 1px solid rgb(0, 255, 0);
+    transform: scale(1.05);
+  }
+  
+  .card-2:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+  .card-3 {
+    box-sizing: border-box;
+    width: 200px;
+    height: 300px;
+    background-image: url(images/man.jpg);
+    background-size: cover; /* Ensures the image covers the entire card */
+    background-position: center; /* Centers the image within the card */
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    opacity: 0%;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+  
+  .card-3:hover {
+    border: 1px solid rgb(72, 255, 0);
+    transform: scale(1.05);
+  }
+  
+  .card-3:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+
+  .card-4 {
+    box-sizing: border-box;
+    width: 200px;
+    height: 300px;
+    background-image: url(images/movie-poster-star-wars-star-wars-the-rise-of-skywalker-2019-year-movies-hd-wallpaper-preview.jpg);
+    background-size: cover; /* Ensures the image covers the entire card */
+    background-position: center; /* Centers the image within the card */
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    opacity: 0%;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+  
+  .card-4:hover {
+    border: 1px solid rgb(43, 255, 0);
+    transform: scale(1.05);
+  }
+  
+  .card-4:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+  .card-5 {
+    box-sizing: border-box;
+    width: 200px;
+    height: 300px;
+    background-image: url(images/MV5BZDU5ZTRkYmItZjg0Mi00ZTQwLThjMWItNWM3MTMxMzVjZmVjXkEyXkFqcGc@._V1_.jpg);
+    background-size: cover; /* Ensures the image covers the entire card */
+    background-position: center; /* Centers the image within the card */
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    opacity: 0%;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+  
+  .card-5:hover {
+    border: 1px solid rgb(9, 255, 0);
+    transform: scale(1.05);
+  }
+  
+  .card-5:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+  .card-6 {
+    box-sizing: border-box;
+    width: 200px;
+    height: 300px;
+    background-image: url(images/spidermilesman.jpg);
+    background-size: cover; /* Ensures the image covers the entire card */
+    background-position: center; /* Centers the image within the card */
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    opacity: 0%;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+  
+  .card-6:hover {
+    border: 1px solid rgb(0, 241, 32);
+    transform: scale(1.05);
+  }
+  
+  .card-6:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+
+  .card-7 {
+    box-sizing: border-box;
+    width: 200px;
+    height: 300px;
+    background-image: url(images/WorldWarZ+movie+posters.jpg);
+    background-size: cover; /* Ensures the image covers the entire card */
+    background-position: center; /* Centers the image within the card */
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    opacity: 0%;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+  
+  .card-7:hover {
+    border: 1px solid rgb(0, 255, 34);
+    transform: scale(1.05);
+  }
+  
+  .card-7:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+
+
+
+
+  .card-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between the cards */
+    gap: 20px; /* Adds space between cards */
+    padding: 20px; /* Optional: Adds padding around the container */
+
+}
+/*------------------------------------------cards-----------------------*/
+.background{
+    width: 100%;
+    min-height: 0vh;
+    background-color: #000;
+    padding: 10px 10%;
+    overflow: hidden;
+}
+
+/*------------------------------------------------------------------------------------------Footer--------------------------------------------------------------------------------- */
+.footer {
+  background-color: black; /* Black background */
+  padding: 20px;
+  text-align: center;
+  color: rgb(62, 255, 3); /* Fluorescent green text */
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px; /* Space between the links */
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: rgb(62, 255, 3); /* Fluorescent green link */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: rgba(62, 255, 3, 0.7); /* Slightly dim the green on hover */
+}
+
+.footer a {
+  font-weight: 500;
+}
+
+/* Optional media query to make footer responsive */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+  }
+}
+/*------------------------------------------------------------------------------------------Footer--------------------------------------------------------------------------------- */
+/*------------------------------------------------------------------------------------------apple --------------------------------------------------------------------------------- */
+
+.thumbnails{
+  padding: 4%;
+  color: rgb(255, 255, 255);
+}
+/* From Uiverse.io by kennyotsu */ 
+.apple {
+  /* color used to softly clip top and bottom of the .words container */
+  align-items: center;
+  padding: 90px;
+  border-radius: 1.25rem;
+}
+.loader {
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 70px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 140px;
+  padding: 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+}
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 9px;
+  color: #3bfc00;
+  animation: spin_4991 6s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+
+
+/*------------------------------------------------------------------------------------------apple --------------------------------------------------------------------------------- */
+
+.section_3{
+background-image: url(images/bg2.jpg);
+width: 100%;
+min-height: 100vh;
+background-position: center;
+background-size: cover;
+padding: 10px 10%;
+overflow: hidden;
+color: rgb(255, 255, 255);
+padding-top: 10%;
+padding-left: 10%;
+font-size: 200%;
+font-weight: bolder;
+padding-bottom: 30%;
+
+  
+}
+
+.section_3 h1{
+  padding-bottom: 10%;
+}
+.artists-container {
+  display: flex;
+  justify-content: space-between; /* Adjusts spacing between the cards */
+  gap: 10px; /* Reduced space between cards (change this value as needed) */
+  padding: 20px; /* Optional: Adds padding around the container */
+}
+
+/* From Uiverse.io by G4b413l */
+.artists1{
+  position: relative;
+  width: 11.875em;
+  height: 16.5em;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 120ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 0.5em;
+  padding-bottom: 3.4em;
+}
+
+.artists1::after {
+  content: "Subscribe";
+  padding-top: 1.25em;
+  padding-left: 1.25em;
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  background: #00AC7C;
+  color: #fff;
+  height: 2.5em;
+  width: 90%;
+  transition: all 80ms;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.artists1 .name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 1.875em;
+  font-weight: 400;
+  color: #000;
+}
+
+.artists1 .profession {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 0.625em;
+  color: #000;
+}
+
+.artists1:hover::after {
+  bottom: 0;
+  opacity: 1;
+}
+
+.artists1:active {
+  transform: scale(0.98);
+}
+
+.artists1:active::after {
+  content: "Added!";
+  height: 3.125em;
+}
+
+.text {
+  max-width: 55px;
+}
+
+.image {
+  background: url(images/WhatsApp\ Image\ 2024-11-04\ at\ 15.38.28_826ed64b.jpg);
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.artists2 {
+  position: relative;
+  width: 11.875em;
+  height: 16.5em;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 120ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 0.5em;
+  padding-bottom: 3.4em;
+}
+
+.artists2::after {
+  content: "Subscribe";
+  padding-top: 1.25em;
+  padding-left: 1.25em;
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  background: #00AC7C;
+  color: #fff;
+  height: 2.5em;
+  width: 90%;
+  transition: all 80ms;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.artists2 .name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 1.875em;
+  font-weight: 400;
+  color: #000;
+}
+
+.artists2 .profession {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 0.625em;
+  color: #000;
+}
+
+.artists2:hover::after {
+  bottom: 0;
+  opacity: 1;
+}
+
+.artists2:active {
+  transform: scale(0.98);
+}
+
+.artists2:active::after {
+  content: "Added!";
+  height: 3.125em;
+}
+
+.text {
+  max-width: 55px;
+}
+
+.image {
+  background: url(images/WhatsApp\ Image\ 2024-11-04\ at\ 15.50.44_cb2d1784.jpg);
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.artists3 {
+  position: relative;
+  width: 11.875em;
+  height: 16.5em;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 120ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 0.5em;
+  padding-bottom: 3.4em;
+}
+
+.artists3::after {
+  content: "Subscribe";
+  padding-top: 1.25em;
+  padding-left: 1.25em;
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  background: #00AC7C;
+  color: #fff;
+  height: 2.5em;
+  width: 90%;
+  transition: all 80ms;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.artists3 .name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 1.875em;
+  font-weight: 400;
+  color: #000;
+}
+
+.artists3 .profession {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 0.625em;
+  color: #000;
+}
+
+.artists3:hover::after {
+  bottom: 0;
+  opacity: 1;
+}
+
+.artists3:active {
+  transform: scale(0.98);
+}
+
+.artists3:active::after {
+  content: "Added!";
+  height: 3.125em;
+}
+
+.text {
+  max-width: 55px;
+}
+
+.image {
+  background: url(images/WhatsApp\ Image\ 2024-11-04\ at\ 15.38.28_826ed64b.jpg);
+  background-size: cover; /* Ensures the image covers the entire card */
+  background-position: center; /* Centers the image within the card */  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.faq-container {
+  width: 80%;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+}
+
+.faq-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  
+}
+
+.faq-card:hover {
+  transform: translateY(-5px);
+}
+
+.faq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #666;
+}
+
+.faq-card.active .faq-answer {
+  display: block;
+}
+.faq h1{
+  padding-top: 20%;
+} 
+h2{
+  position: center;
+}
